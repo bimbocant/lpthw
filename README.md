@@ -1,2 +1,2 @@
 # lpthw
-Repository for some exercises from LPTHW book
+Repository for some exercises from Learn Python The Hard Way book
