@@ -1,5 +1,3 @@
-
-
 lex=[('direction','north'),
             ('direction','south'),
             ('direction','east'),
@@ -15,12 +13,11 @@ lex=[('direction','north'),
 #returns the tuple of the given direction
 def scan(string):
     word_list=string.split()
-    print('word_list',word_list)
     result=[]
     appended=False
     for word in word_list:
         for t in lex:
-                if word in t and appended==False:
+                if word.lower() in t and appended==False:
                     result.append(t)
                     appended=True
         #word is not in lex so it's a number or an error
@@ -31,5 +28,4 @@ def scan(string):
             except ValueError as e:
                 result.append(('error',word))
         appended=False
-
     return result
